@@ -9,14 +9,9 @@ window.onerror = function errorHandler(errorMsg, url, lineNumber) {
 }
 
 function loadPage(num) {
-    try {
-        let pageData = story.story.num
-        storyDiv = document.getElementById("story-stuff")
-        storyDiv.innerHTML += `<p>${pageData.title}<p><br><p>${pageData.text}</p>`
-    }
-    catch {
-        alert("Error occured loading page " + num)
-    }
+    let pageData = story.story.num
+    storyDiv = document.getElementById("story-stuff")
+    storyDiv.innerHTML += `<p>${pageData.title}<p><br><p>${pageData.text}</p>`
 }
 
 function start() {
