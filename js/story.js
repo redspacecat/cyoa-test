@@ -9,7 +9,7 @@ window.onerror = function errorHandler(errorMsg, url, lineNumber) {
 }
 
 function loadPage(num) {
-    let pageNum = num.toString()
+    let pageNum = "page" + num.toString()
     let pageData = story.story.pageNum
     storyDiv = document.getElementsByClassName("story-stuff")[0]
     storyDiv.innerHTML = `<p>${pageData.title}<p><br><p>${pageData.text}</p>`
