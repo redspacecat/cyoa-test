@@ -14,14 +14,18 @@ function loadPage(num) {
     let pageNum = num.toString()
     let pageData = story.story[pageNum]
     storyDiv = document.getElementsByClassName("story-stuff")[0]
-    storyDiv.innerHTML = `<h3>${pageData.title}</h3><p>${pageData.text}</p>`
+    if (pageData == undefined) {
+        storyDiv.innerHTML = `<h3>404 - Page not found</h3><p>Sorry, we couldn't find the requested page in the story</p>`
+    } else {
+        storyDiv.innerHTML = `<h3>${pageData.title}</h3><p>${pageData.text}</p>`
 
-    let options = pageData.options
-    let optionsDiv = document.getElementById("options-list")
-    optionsDiv.innerHTML = ""
+        let options = pageData.options
+        let optionsDiv = document.getElementById("options-list")
+        optionsDiv.innerHTML = ""
 
-    for (let i = 0; i < options.length; i++) {
-        optionsDiv.innerHTML += `<li><a href="#${options[i].id}" onclick="loadPage(${options[i].id})">${options[i].text}</a></li>`
+        for (let i = 0; i < options.length; i++) {
+            optionsDiv.innerHTML += `<li><a href="#${options[i].id}" onclick="loadPage(${options[i].id})">${options[i].text}</a></li>`
+        }
     }
 
 }
