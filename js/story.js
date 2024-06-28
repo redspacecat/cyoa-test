@@ -6,6 +6,7 @@ function start() {
     if (storyData == null || undefined) {
         window.location.pathname.replace("story", "")
     } else {
+        storyData = JSON.parse(storyData)
         alert("Welcome to " + storyData.info.title)
     }
 }
