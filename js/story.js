@@ -15,13 +15,12 @@ function loadPage(num) {
     storyDiv.innerHTML = `<h3>${pageData.title}</h3><p>${pageData.text}</p>`
 
     let options = pageData.options
-    storyDiv.innerHTML += "<ul>"
+    let optionsDiv = document.getElementById("options-list")
 
     for (let i = 0; i < options.length; i++) {
-        storyDiv.innerHTML += `<li><a href="#${options.id}" onclick="loadPage(${options.id})">${options.text}</a></li>`
+        optionsDiv.innerHTML += `<li><a href="#${options.id}" onclick="loadPage(${options.id})">${options.text}</a></li>`
     }
-    
-    storyDiv.innerHTML += "</ul>"
+
 }
 
 function start() {
