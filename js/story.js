@@ -18,7 +18,7 @@ function loadPage(num) {
     let optionsDiv = document.getElementById("options-list")
 
     for (let i = 0; i < options.length; i++) {
-        optionsDiv.innerHTML += `<li><a href="#${options.id}" onclick="loadPage(${options.id})">${options.text}</a></li>`
+        optionsDiv.innerHTML += `<li><a href="#${options[i].id}" onclick="loadPage(${options[i].id})">${options[i].text}</a></li>`
     }
 
 }
