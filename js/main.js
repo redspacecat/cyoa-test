@@ -25,7 +25,7 @@ function finish(result) {
         errorBox.innerHTML = ""
 
         descBox.innerHTML = storyData.info.description
-        titleBox.innerHTML = storyData.info.titleBox
+        titleBox.innerHTML = storyData.info.title
 
     }
     catch (error) {
