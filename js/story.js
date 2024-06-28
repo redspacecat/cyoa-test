@@ -35,7 +35,7 @@ function start() {
         story = JSON.parse(story)
         page = window.location.hash
 
-        if (!(page == "#NaN")) {
+        if (!(page == "#NaN" || "")) {
             page = parseInt(page.slice(1, ))
         } else {
             page = 1
