@@ -12,7 +12,16 @@ function loadPage(num) {
     let pageNum = num.toString()
     let pageData = story.story[pageNum]
     storyDiv = document.getElementsByClassName("story-stuff")[0]
-    storyDiv.innerHTML = `<p>${pageData.title}<p><p>${pageData.text}</p>`
+    storyDiv.innerHTML = `<h3>${pageData.title}</h3><p>${pageData.text}</p>`
+
+    let options = pageData.options
+    storyDiv.innerHTML += "<ul>"
+
+    for (let i = 0; i < options.length; i++) {
+        storyDiv.innerHTML += `<li><a href="#${options.id}" onclick="loadPage(${options.id})">${options.text}</a></li>`
+    }
+    
+    storyDiv.innerHTML += "</ul>"
 }
 
 function start() {
