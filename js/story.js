@@ -11,8 +11,7 @@ window.onerror = function errorHandler(errorMsg, url, lineNumber) {
 function loadPage(num) {
     let pageData = story.story.num
     storyDiv = document.getElementById("story-stuff")
-    storyDiv.innerHTML = ""
-    storyDiv.innerHTML += `<p>${pageData.title}<p><br><p>${pageData.text}</p>`
+    storyDiv.innerHTML = `<p>${pageData.title}<p><br><p>${pageData.text}</p>`
 }
 
 function start() {
