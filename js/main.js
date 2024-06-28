@@ -10,7 +10,8 @@ function getFile(event) {
 }
 
 function finish(result) {
-	alert(result)
+    localStorage.setItem("story", result)
+    window.location.href = "story"
 }
 
 function placeFileContent(file) {
