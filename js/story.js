@@ -35,7 +35,7 @@ function start() {
         story = JSON.parse(story)
         page = window.location.hash
 
-        if (!page == undefined) {
+        if (!(page == undefined)) {
             page = parseInt(page.slice(1, ))
         } else {
             page = 1
