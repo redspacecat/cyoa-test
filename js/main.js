@@ -20,12 +20,14 @@ function finish(result) {
     errorBox = document.getElementById("error-box")
     titleBox = document.getElementById("title-box")
     descBox = document.getElementById("desc-box")
+    playButton = document.getElementById("play-button")
     try {
         storyData = JSON.parse(result)
         errorBox.innerHTML = ""
 
         descBox.innerHTML = storyData.info.description
         titleBox.innerHTML = storyData.info.title
+        playButton.hidden = false
 
     }
     catch (error) {
