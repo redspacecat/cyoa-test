@@ -18,6 +18,7 @@ function loadPage(num) {
 
     let options = pageData.options
     let optionsDiv = document.getElementById("options-list")
+    optionsDiv.innerHTML = ""
 
     for (let i = 0; i < options.length; i++) {
         optionsDiv.innerHTML += `<li><a href="#${options[i].id}" onclick="loadPage(${options[i].id})">${options[i].text}</a></li>`
@@ -27,7 +28,7 @@ function loadPage(num) {
 
 function start() {
     story = localStorage.getItem("story")
-    if (story == null || undefined) {
+    if (story == null || story == undefined) {
         window.location.pathname = window.location.pathname.replace("story", "")
     } else {
 
