@@ -21,6 +21,10 @@ function finish(result) {
     titleBox = document.getElementById("title-box")
     descBox = document.getElementById("desc-box")
     playButton = document.getElementById("play-button")
+    seperator = document.getElementById("seperator")
+
+    seperator.hidden = false
+
     try {
         storyData = JSON.parse(result)
         errorBox.innerHTML = ""
