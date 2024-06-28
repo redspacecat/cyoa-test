@@ -41,6 +41,6 @@ function start() {
             page = 1
         }
 
-        loadPage(page)
+        loadPage(page) 
     }
 }
