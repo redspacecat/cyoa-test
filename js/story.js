@@ -1,7 +1,7 @@
 let page
 let story
 
-window.onload = setTimeout(start, 100)
+window.onload = start
 
 window.onerror = function errorHandler(errorMsg, url, lineNumber) {
     alert("Error occured: " + errorMsg);
