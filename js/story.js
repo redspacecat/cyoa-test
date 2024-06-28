@@ -1,7 +1,7 @@
 let page
 let story
 
-// window.onload = start()
+window.onload = setTimeout(start, 100)
 
 window.onerror = function errorHandler(errorMsg, url, lineNumber) {
     alert("Error occured: " + errorMsg);
@@ -12,7 +12,7 @@ function loadPage(num) {
     let pageNum = "page" + num.toString()
     let pageData = story.story[pageNum]
     storyDiv = document.getElementsByClassName("story-stuff")[0]
-    storyDiv.innerHTML = `<p>${pageData.title}<p><br><p>${pageData.text}</p>`
+    storyDiv.innerHTML = `<p>${pageData.title}<p><p>${pageData.text}</p>`
 }
 
 function start() {
