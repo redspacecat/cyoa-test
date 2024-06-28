@@ -33,10 +33,10 @@ function start() {
     } else {
 
         story = JSON.parse(story)
-        page = parseInt(window.location.hash)
+        page = window.location.hash
 
         if (!page == undefined) {
-            page = page.slice(1, )
+            page = parseInt(page.slice(1, ))
         } else {
             page = 1
         }
