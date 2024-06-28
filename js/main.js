@@ -1,3 +1,5 @@
+let storyData
+
 document.getElementById('input-file')
   .addEventListener('change', getFile)
 
@@ -9,9 +11,26 @@ function getFile(event) {
   }
 }
 
+function playStory() {
+    window.location.href = "story"
+}
+
 function finish(result) {
     localStorage.setItem("story", result)
-    window.location.href = "story"
+    errorBox = document.getElementById("error-box")
+    titleBox = document.getElementById("title-box")
+    descBox = document.getElementById("desc-box")
+    try {
+        storyData = JSON.parse(result)
+        errorBox.innerHTML = ""
+
+        descBox.innerHTML = storyData.info.description
+        titleBox.innerHTML = storyData.info.titleBox
+
+    }
+    catch (error) {
+        errorBox.innerHTML = "Error loading the adventure file: " + error
+    }
 }
 
 function placeFileContent(file) {
