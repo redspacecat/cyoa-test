@@ -53,3 +53,7 @@ function readFileContent(file) {
     reader.readAsText(file)
   })
 }
+
+function create() {
+    window.location.href = "create"
+}
