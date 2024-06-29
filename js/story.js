@@ -10,7 +10,7 @@ window.onerror = function errorHandler(errorMsg, url, lineNumber) {
 }
 
 function reloadData() {
-    window.location.reload()
+    start()
 }
 
 function loadPage(num) {
