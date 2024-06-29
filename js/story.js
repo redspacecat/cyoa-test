@@ -2,6 +2,7 @@ let page
 let story
 
 window.onload = start
+window.onhashchange = window.location.reload
 
 window.onerror = function errorHandler(errorMsg, url, lineNumber) {
     alert("Error occured: " + errorMsg);
