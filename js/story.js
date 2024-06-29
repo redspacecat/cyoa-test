@@ -2,11 +2,15 @@ let page
 let story
 
 window.onload = start
-window.onhashchange = window.location.reload
+window.onhashchange = reloadData
 
 window.onerror = function errorHandler(errorMsg, url, lineNumber) {
     alert("Error occured: " + errorMsg);
     return false;
+}
+
+function reloadData() {
+    window.location.reload()
 }
 
 function loadPage(num) {
