@@ -30,7 +30,7 @@ function loadPage(num) {
         optionsDiv.innerHTML = ""
 
         for (let i = 0; i < options.length; i++) {
-            optionsDiv.innerHTML += `<li><a href="#${options[i].id}" onclick="loadPage(${options[i].id})">${options[i].text}</a></li>`
+            optionsDiv.innerHTML += `<li><a class="blue" href="#${options[i].id}" onclick="loadPage(${options[i].id})">${options[i].text}</a></li>`
         }
     }
 
